@@ -1,0 +1,47 @@
+.pokedex-search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-component {
+    margin: 2rem 0;
+    max-width: 515px;
+    min-width: 400px;
+    position: relative;
+    width: 53%;
+}
+
+.search-component > button {
+    background-color: #75D397;
+    border: 1px solid #75D397;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #F5F5F5;
+    cursor: pointer;
+    font-size: 16px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6rem;
+}
+
+.search-component > input {
+    border: 1px solid #CCC;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    font-size: 18px;
+    padding: 1rem 1rem 1rem 3rem;
+    width: calc(90.5% - 6.5rem);
+}
+
+.search-component > input:focus {
+    outline: none;
+}
+
+.search-component > img {
+    left: 10px;
+    position: absolute;
+    top: 12px;
+    width: 30px;
+}

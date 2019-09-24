@@ -1,6 +1,7 @@
 import React from 'react';
 import PokemonModel from './models/PokemonModel';
-import Pokemon from './components/Pokemon';
+import Pokemon from './components/Pokemon/Pokemon';
+import Search from './components/Search/Search';
 import './App.css';
 
 class App extends React.Component {
@@ -52,8 +53,12 @@ class App extends React.Component {
 
     return (
       <div className="app">
+        <Search/>
         <div className="poke-list">
           { pokeArray.map(poke => <Pokemon pokemon={poke}/>) }
+        </div>
+        <div className="load-more-container">
+          <a className="load-more-btn">Load More</a>
         </div>
       </div>
     );

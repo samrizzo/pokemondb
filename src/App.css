@@ -1,0 +1,27 @@
+.load-more-container {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 1rem auto;
+    width: 70%;
+}
+
+.load-more-btn {
+    color: #2B79C0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.poke-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+@media only screen and (max-width: 800px) {
+    .poke-list {
+        width: 95%;
+    }
+}
