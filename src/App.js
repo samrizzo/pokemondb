@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './components/Home/Home';
 import PokemonModel from './models/PokemonModel';
 import Pokemon from './components/Pokemon/Pokemon';
 import Search from './components/Search/Search';
@@ -53,6 +54,7 @@ class App extends React.Component {
 
     return (
       <div className="app">
+        <Home/>
         <Search/>
         <div className="poke-list">
           { pokeArray.map(poke => <Pokemon pokemon={poke}/>) }

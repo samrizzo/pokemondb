@@ -15,6 +15,7 @@
 .poke-list {
     display: flex;
     flex-wrap: wrap;
+    height: 85vh;
     justify-content: center;
     margin: 0 auto;
     width: 80%;

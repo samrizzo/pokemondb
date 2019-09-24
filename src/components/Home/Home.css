@@ -1,0 +1,4 @@
+.main {
+    border-bottom: 1px solid #ddd;
+    height: calc(100vh - 1px);
+}
