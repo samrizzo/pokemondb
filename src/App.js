@@ -7,9 +7,9 @@ import './App.css';
 
 class App extends React.Component {
 
-  constructor() {
-    super();
-    this.state = { pokemon: []};
+  constructor(props) {
+    super(props);
+    this.state = { pokemon: [], numberOfItemsShown: 10};
   }
 
   componentDidMount() {
@@ -44,23 +44,36 @@ class App extends React.Component {
     .catch(console.log)
   }
 
+  loadMore = (state) => {
+    let pokemonArrayLength = this.state.pokemon.length;
+    let itemsShown = this.state.numberOfItemsShown + 10 > pokemonArrayLength ? pokemonArrayLength : this.state.numberOfItemsShown + 10;
+
+    if (itemsShown === this.state.pokemon.length) {
+      let loadButton = document.getElementById('load-button');
+      loadButton.style.display = 'none';
+    }
+
+    this.setState({ numberOfItemsShown: itemsShown });
+  }
+
   updatePokemonState(pokemonArray) {
     this.setState({ pokemon: pokemonArray });
   }
 
   render() {
+
     let pokeArray = this.state.pokemon;
-    pokeArray = pokeArray.filter(i => i.id <= 10);
+    pokeArray = pokeArray.filter(i => i.id <= this.state.numberOfItemsShown);
 
     return (
       <div className="app">
         <Home/>
         <Search/>
-        <div className="poke-list">
-          { pokeArray.map(poke => <Pokemon pokemon={poke}/>) }
+        <div className="poke-list" id="poke-list">
+          { pokeArray.map(poke => <Pokemon key={poke.id} pokemon={poke}/>) }
         </div>
-        <div className="load-more-container">
-          <a className="load-more-btn">Load More</a>
+        <div className="loading-container">
+            <button className="load-button" id="load-button" onClick={this.loadMore}>Load More</button>
         </div>
       </div>
     );

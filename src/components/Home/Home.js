@@ -20,7 +20,7 @@ class Navigation extends React.Component {
         return (
             <div className="navigation">
                 <div className="logo">
-                    <img src={Logo}/>
+                    <img src={Logo} alt={Logo}/>
                     <div>Pokemon Database</div>
                 </div>
                 <div className="navigation-menu">
@@ -39,12 +39,12 @@ class HeroContent extends React.Component {
     render() {
         return (
             <div className="hero-container">
-                <div class="hero-content">
+                <div className="hero-content">
                     <h1 className="hero-title">Welcome to the Pokemon Database</h1>
                     <p className="hero-subtext">The most comprehensive <br/>source for all things Pokemon</p>
                 </div>
                 <div className="hero-button-container">
-                    <button className="hero-button">Explore</button>
+                    <a className="hero-button" href="#search">Explore</a>
                 </div>
             </div>
         );

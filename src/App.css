@@ -1,24 +1,45 @@
-.load-more-container {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 1rem auto;
-    width: 70%;
+.load-button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    bottom: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    padding: .75rem;
+    position: absolute;
+    width: 10rem;
 }
 
-.load-more-btn {
-    color: #2B79C0;
-    cursor: pointer;
-    font-size: 16px;
+.load-button:focus {
+    outline: none;
+}
+
+.load-button:hover {
+    background-color: #DDD;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    min-height: 80px;
+    position: relative;
+    width: 100%;
 }
 
 .poke-list {
     display: flex;
     flex-wrap: wrap;
-    height: 85vh;
     justify-content: center;
     margin: 0 auto;
     width: 80%;
+}
+
+@keyframes load {
+    0% { opacity: 0; }
+    25% { opacity: .5; }
+    50% { opacity: 1; }
+    75% { opacity: .5; }
+    100% { opacity: 0; } 
 }
 
 @media only screen and (max-width: 800px) {

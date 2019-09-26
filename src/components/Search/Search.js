@@ -6,7 +6,7 @@ class Search extends React.Component {
     render() {
         return (
             <div className="pokedex-search-container">
-                <div className="search-component">
+                <div className="search-component" id="search">
                     <img src={logo} alt={logo}/>
                     <input placeholder="Pokemon Number or Name" />
                     <button className="pokedex-search">Search</button>
